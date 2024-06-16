@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh Waves Juice Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            background: #004d40;
+            color: white;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav select {
+            padding: 10px;
+            font-size: 1em;
+            width: 90%;
+            max-width: 400px;
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fresh Waves Juice Bar</h1>
+        <p>Enjoy a refreshing and healthy selection of juices</p>
+    </header>
+
+    <nav>
+        <select id="category-select">
+            <option value="">Choose a category</option>
+            <optgroup label="Detoxifying Juices">
+                <option value="green_goddess_elixir.html">Green Goddess Elixir</option>
+            </optgroup>
+            <optgroup label="Energizing Juices">
+                <option value="sunshine_turmeric_zing.html">Sunshine Turmeric Zing</option>
+            </optgroup>
+            <optgroup label="Hydrating Juices">
+                <option value="cucumber_melon_cooler.html">Cucumber Melon Cooler</option>
+            </optgroup>
+            <optgroup label="Immunity-Boosting Juices">
+                <option value="turmeric_ginger_glow.html">Turmeric Ginger Glow</option>
+            </optgroup>
+            <optgroup label="Digestive Health Juices">
+                <option value="pear_lime_refresher.html">Pear Lime Refresher</option>
+            </optgroup>
+        </select>
+    </nav>
+
+    <main id="menu">
+        <!-- Initial content or instructions -->
+        <p>Select a juice category from the dropdown menu to view details.</p>
+    </main>
+
+    <script>
+        document.getElementById('category-select').addEventListener('change', function() {
+            const itemKey = this.value;
+            if (itemKey) {
+                window.location.href = itemKey;
+            }
+        });
+    </script>
+</body>
+</html>
